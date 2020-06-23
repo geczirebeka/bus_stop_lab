@@ -14,4 +14,8 @@ class BusStop
     def queue_length()
         return @queue.length
     end
+
+    def clear_queue()
+        @queue.clear()
+    end
 end
