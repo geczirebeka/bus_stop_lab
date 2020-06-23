@@ -5,5 +5,6 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 require_relative('../bus')
 
 class PersonTest < MiniTest::Test
+    
 
 end
