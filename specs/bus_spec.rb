@@ -9,6 +9,10 @@ class BusTest < MiniTest::Test
 
     def setup()
         @bus = Bus.new(22, "Ocean Terminal")
+
+        @passenger1 = Person.new("Rebeka", 25)
+        @passenger2 = Person.new("James", 26)
+        
     end
 
     def test_drive()
@@ -17,6 +21,11 @@ class BusTest < MiniTest::Test
 
     def test_total_passengers()
         assert_equal(0, @bus.total_passengers())
+    end
+
+    def test_pick_up()
+        @bus.pick_up(@person1)
+        assert_equal(1, @bus.total_passengers())
     end
 
 end
